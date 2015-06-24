@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">MyApp</string>
+
+    <string name="mpermission_btn">Test M permisson!</string>
+    <string name="mpermission_tv">click to test M permisson!</string>
+
+    <string name="recyclerbtn">start test recycler view</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my_permisson">MyPermisson</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_recycler">RecyclerActivity</string>
+
+    <string name="flip_delete_btn">flip delete activity</string>
+    <string name="title_activity_flip_delete">FlipDeleteActivity</string>
+
+    <string name="actionbar_viewpage_btn">Actionbar ViewPage Activity</string>
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+    <string name="demo_external_activity">Demo External Activity</string>
+    <string name="demo_collection">Demo Collection</string>
+
+    <string name="delete_btn">Delete</string>
+    <string name="title_activity_actionbar_view_page">ActionbarViewPage</string>
+    <string name="title_activity_collection_demo">CollectionDemoActivity</string>
+
+    <string name="title_activity_rotation">RotationActivity</string>
+    <string name="title_activity_bounce">BounceActivity</string>
+
+    <!--string for Bounce-->
+    <string name="profile">PROFILE</string>
+    <string name="feed">FEED</string>
+    <string name="activity">ACTIVITY</string>
+    <string name="settings">SETTINGS</string>
+</resources>

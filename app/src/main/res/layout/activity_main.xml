@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.lp.myapp.TestView
+        android:id="@+id/testview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:label="Hello My View" />
+
+    <Button
+        android:id="@+id/testmpermisson"
+        android:text="@string/mpermission_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick" />
+
+    <Button
+        android:id="@+id/testRecycler"
+        android:text="@string/recyclerbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick" />
+
+    <Button
+        android:id="@+id/show_flip_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flip_delete_btn"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:onClick="onBtnClick" />
+
+    <Button
+        android:id="@+id/actionbar_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/actionbar_viewpage_btn"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:onClick="onBtnClick" />
+
+    <Button
+        android:id="@+id/rotation_test"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/title_activity_rotation"
+        android:textSize="15sp"
+        android:textColor="@color/button_color"
+        android:onClick="onBtnClick" />
+
+
+</LinearLayout>
