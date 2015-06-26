@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SlidingTabsBasic</string>
+    <string name="intro_message">
+        <![CDATA[
+
+
+            A basic sample which shows how to use SlidingTabLayout to display a custom
+            ViewPager title strip which gives continuous feedback to the user when scrolling.
+
+
+        ]]>
+    </string>
+</resources>

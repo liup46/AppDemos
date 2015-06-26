@@ -32,4 +32,5 @@
     <string name="feed">FEED</string>
     <string name="activity">ACTIVITY</string>
     <string name="settings">SETTINGS</string>
+    <string name="title_activity_slide_basic">SlideBasicActivity</string>
 </resources>

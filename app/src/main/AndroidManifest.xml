@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lp.myapp">
+    package="com.lp.myapp" >
 
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -9,10 +9,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,38 +22,33 @@
         <activity
             android:name=".MyPermisson"
             android:label="@string/title_activity_my_permisson"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".RecyclerActivity"
             android:label="@string/title_activity_recycler"
-            android:parentActivityName=".MainActivity"></activity>
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FlipDeleteActivity"
-            android:label="@string/title_activity_flip_delete"></activity>
+            android:label="@string/title_activity_flip_delete" />
         <activity
             android:name=".ActionbarViewPage"
             android:label="@string/title_activity_actionbar_view_page"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".CollectionDemoActivity"
             android:label="@string/title_activity_collection_demo"
-            android:theme="@style/AppTheme"></activity>
-
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.lp.rotation.RotationActivity"
             android:label="@string/title_activity_rotation"
-            android:parentActivityName="com.lp.myapp.MainActivity">
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lp.myapp.MainActivity" />
         </activity>
-
-
         <activity
-            android:name="com.lp.myapp.BounceActivity"
-            android:label="@string/title_activity_bounce"></activity>
-
+            android:name=".BounceActivity"
+            android:label="@string/title_activity_bounce" />
 
         <!-- <receiver -->
         <!-- android:name="TestReceiver" -->
@@ -67,6 +62,10 @@
         <!-- <data android:scheme="*" -->
         <!-- </intent-filter> -->
         <!-- </receiver> -->
+        <activity
+            android:name="com.lp.slidebasic.SlideBasicActivity"
+            android:label="@string/title_activity_slide_basic" >
+        </activity>
     </application>
 
 </manifest>
