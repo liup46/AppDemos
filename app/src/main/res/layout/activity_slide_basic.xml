@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.lp.slidebasic.SlideBasicActivity">
+    tools:context="com.lp.slideviewpagebasic.SlideBasicActivity">
 
     <ViewAnimator
         android:id="@+id/sample_output"
@@ -32,7 +32,7 @@
             android:id="@+id/log_fragment"
             android:name="com.lp.common.logger.LogFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="match_parent" />
 
 
     </ViewAnimator>

@@ -1,4 +1,4 @@
-package com.lp.slidebasic;
+package com.lp.slideviewpagebasic;
 
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
@@ -20,7 +20,7 @@ public class SlideBasicActivity extends ActionBarActivity {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             SlidingTabsBasicFragment basicFragment = new SlidingTabsBasicFragment();
             transaction.replace(R.id.sample_content_fragment, basicFragment);
-            transaction.commit()
+            transaction.commit();
         }
 
 

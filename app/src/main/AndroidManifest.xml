@@ -63,7 +63,7 @@
         <!-- </intent-filter> -->
         <!-- </receiver> -->
         <activity
-            android:name="com.lp.slidebasic.SlideBasicActivity"
+            android:name="com.lp.slideviewpagebasic.SlideBasicActivity"
             android:label="@string/title_activity_slide_basic" >
         </activity>
     </application>
