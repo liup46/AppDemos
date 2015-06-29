@@ -1,9 +1,13 @@
 package com.lp.slideviewpagebasic;
 
 import android.content.Context;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,12 +30,12 @@ public class SlidingTabLayout extends HorizontalScrollView {
     private SlidingTabStrip mTabStrip;
 
     public SlidingTabLayout(Context context) {
-        super(context);
+        this(context, null);
     }
 
 
     public SlidingTabLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs, 0);
     }
 
     public SlidingTabLayout(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -108,9 +112,56 @@ public class SlidingTabLayout extends HorizontalScrollView {
     }
 
     private View createDefaultTabView(Context context) {
-        return new View(context);
+        TextView textView = new TextView(context);
+        textView.setGravity(Gravity.CENTER);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, TAB_VIEW_TEXT_SIZE_SP);
+        textView.setTypeface(Typeface.DEFAULT_BOLD);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            TypedValue outValue = new TypedValue();
+            context.getTheme().resolveAttribute(android.R.attr.selectableItemBackground, outValue, true);
+            textView.setBackgroundResource(outValue.resourceId);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            textView.setAllCaps(true);
+        }
+
+        int padding = (int) (TAB_VIEW_PADDING_DIPS * getResources().getDisplayMetrics().density);
+        textView.setPadding(padding, padding, padding, padding);
+        return textView;
 
     }
+
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+
+        if (mViewPager != null) {
+            scrollToTab(mViewPager.getCurrentItem(), 0);
+        }
+    }
+
+    private void scrollToTab(int tabIndex, int positionOffset) {
+        final int tabStripChildCount = mTabStrip.getChildCount();
+
+        if (tabIndex < 0 || tabStripChildCount == 0 || tabIndex >= tabStripChildCount) {
+            return;
+        }
+        View tabView = mTabStrip.getChildAt(tabIndex);
+        if (tabView != null) {
+            int targetScrollX = tabView.getLeft() + positionOffset;
+
+            if (tabIndex > 0 || positionOffset > 0) {
+                targetScrollX -= mTitleOffsert;
+            }
+
+            scrollTo(targetScrollX, 0);
+        }
+
+    }
+
 
     public interface TabColorizer {
         int getIndicatorColor(int position);
@@ -118,20 +169,50 @@ public class SlidingTabLayout extends HorizontalScrollView {
         int getDividerColor(int position);
     }
 
-    private static class InternalViewPagerListener implements ViewPager.OnPageChangeListener {
+    private class InternalViewPagerListener implements ViewPager.OnPageChangeListener {
+        private int mScrollState;
 
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+            int stripChildCount = mTabStrip.getChildCount();
 
+            if (stripChildCount == 0 || position < 0 || position >= stripChildCount) {
+                return;
+
+            }
+            mTabStrip.onViewPaperPageChanged(position, positionOffset);
+
+            View selectedChild = mTabStrip.getChildAt(position);
+            int extraOffset = (selectedChild != null) ? (int) (selectedChild.getWidth() * positionOffset) : 0;
+            scrollToTab(position, extraOffset);
+            if (mOnPageChangeListener != null) {
+                mOnPageChangeListener.onPageScrolled(position, positionOffset, positionOffsetPixels);
+
+            }
         }
 
         @Override
         public void onPageSelected(int position) {
+            if (mScrollState == ViewPager.SCROLL_STATE_IDLE) {
+                mTabStrip.onViewPaperPageChanged(position, 0f);
+                scrollToTab(position, 0);
+
+            }
+
+            if (mOnPageChangeListener != null) {
+                mOnPageChangeListener.onPageSelected(position);
+            }
 
         }
 
         @Override
         public void onPageScrollStateChanged(int state) {
+
+            mScrollState = state;
+            if (mOnPageChangeListener != null) {
+                mOnPageChangeListener.onPageScrollStateChanged(state);
+            }
+
 
         }
     }

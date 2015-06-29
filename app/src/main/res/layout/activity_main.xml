@@ -56,5 +56,14 @@
         android:textColor="@color/button_color"
         android:onClick="onBtnClick" />
 
+    <Button
+        android:id="@+id/slidebasic_test"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/title_activity_slide_basic"
+        android:textSize="15sp"
+        android:textColor="@color/button_color"
+        android:onClick="onBtnClick" />
+
 
 </LinearLayout>

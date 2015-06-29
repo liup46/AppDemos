@@ -35,6 +35,10 @@ public class MainActivity extends ActionBarActivity {
             case R.id.rotation_test:
                 startActivity(new Intent(this, com.lp.rotation.RotationActivity.class));
                 break;
+
+            case R.id.slidebasic_test:
+                startActivity(new Intent(this, com.lp.slideviewpagebasic.SlideBasicActivity.class));
+                break;
             default:
                 break;
         }
