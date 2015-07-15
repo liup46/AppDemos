@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textColor="#33333333"
+        android:layout_marginTop="10dp"
+        android:text="开始游戏" />
+
+
+    <Button
+        android:id="@+id/introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#33333333"
+        android:layout_marginTop="10dp"
+        android:text="游戏介绍" />
+
+
+    <Button
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#33333333"
+        android:layout_marginTop="10dp"
+        android:text="关于作者" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#33333333"
+        android:layout_marginTop="10dp"
+        android:text="退出" />
+
+</LinearLayout>

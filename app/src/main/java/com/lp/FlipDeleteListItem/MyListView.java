@@ -1,4 +1,4 @@
-package com.lp.myapp;
+package com.lp.FlipDeleteListItem;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,6 +7,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+
+import com.lp.myapp.R;
 
 /**
  * Created by pengliu2 on 6/23/15.

@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 
+import com.lp.FancyCoverFlow.FancyCoverMainActivity;
+import com.lp.FlipDeleteListItem.FlipDeleteActivity;
+import com.lp.girlsecret.GirlSecretActivity;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -35,9 +39,16 @@ public class MainActivity extends ActionBarActivity {
             case R.id.rotation_test:
                 startActivity(new Intent(this, com.lp.rotation.RotationActivity.class));
                 break;
+            case R.id.flip_delete:
+                startActivity(new Intent(this, com.lp.FlipfinishActivity.FlipDeleteActivity.class));
+                break;
 
-            case R.id.slidebasic_test:
-                startActivity(new Intent(this, com.lp.slideviewpagebasic.SlideBasicActivity.class));
+            case R.id.girl_secret:
+                startActivity(new Intent(this, GirlSecretActivity.class));
+                break;
+
+            case R.id.Fancy_Cover_Flow:
+                startActivity(new Intent(this, FancyCoverMainActivity.class));
                 break;
             default:
                 break;

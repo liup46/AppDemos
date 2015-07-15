@@ -1,8 +1,10 @@
-package com.lp.myapp;
+package com.lp.FlipDeleteListItem;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.ArrayAdapter;
+
+import com.lp.myapp.R;
 
 import java.util.ArrayList;
 

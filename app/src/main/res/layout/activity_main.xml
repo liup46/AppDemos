@@ -65,5 +65,32 @@
         android:textColor="@color/button_color"
         android:onClick="onBtnClick" />
 
+    <Button
+        android:id="@+id/flip_delete"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Flip To Delelet Activity"
+        android:textSize="15sp"
+        android:textColor="@color/button_color"
+        android:onClick="onBtnClick" />
+
+
+    <Button
+        android:id="@+id/girl_secret"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Girl Secret"
+        android:textSize="15sp"
+        android:textColor="@color/button_color"
+        android:onClick="onBtnClick" />
+
+    <Button
+        android:id="@+id/Fancy_Cover_Flow"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Fancy Cover Flow"
+        android:textSize="15sp"
+        android:textColor="@color/button_color"
+        android:onClick="onBtnClick" />
 
 </LinearLayout>

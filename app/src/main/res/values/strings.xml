@@ -33,4 +33,6 @@
     <string name="activity">ACTIVITY</string>
     <string name="settings">SETTINGS</string>
     <string name="title_activity_slide_basic">SlideBasicActivity</string>
+    <string name="title_activity_flip_delete2">FlipDelete2</string>
+    <string name="title_activity_flip_delete3">FlipDelete3</string>
 </resources>
