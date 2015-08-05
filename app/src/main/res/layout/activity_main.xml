@@ -1,12 +1,17 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <com.lp.myapp.TestView
@@ -17,80 +22,103 @@
 
     <Button
         android:id="@+id/testmpermisson"
-        android:text="@string/mpermission_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onBtnClick" />
+        android:onClick="onBtnClick"
+        android:text="@string/mpermission_btn" />
 
     <Button
         android:id="@+id/testRecycler"
-        android:text="@string/recyclerbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onBtnClick" />
+        android:onClick="onBtnClick"
+        android:text="@string/recyclerbtn" />
 
     <Button
         android:id="@+id/show_flip_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
         android:text="@string/flip_delete_btn"
-        android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:onClick="onBtnClick" />
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/actionbar_viewpager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
         android:text="@string/actionbar_viewpage_btn"
-        android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:onClick="onBtnClick" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/rotation_test"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
         android:text="@string/title_activity_rotation"
-        android:textSize="15sp"
         android:textColor="@color/button_color"
-        android:onClick="onBtnClick" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/slidebasic_test"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
         android:text="@string/title_activity_slide_basic"
-        android:textSize="15sp"
         android:textColor="@color/button_color"
-        android:onClick="onBtnClick" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/flip_delete"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
         android:text="Flip To Delelet Activity"
-        android:textSize="15sp"
         android:textColor="@color/button_color"
-        android:onClick="onBtnClick" />
+        android:textSize="15sp" />
 
 
     <Button
         android:id="@+id/girl_secret"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
         android:text="Girl Secret"
-        android:textSize="15sp"
         android:textColor="@color/button_color"
-        android:onClick="onBtnClick" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/Fancy_Cover_Flow"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
         android:text="Fancy Cover Flow"
-        android:textSize="15sp"
         android:textColor="@color/button_color"
-        android:onClick="onBtnClick" />
+        android:textSize="15sp" />
+
+
+    <Button
+        android:id="@+id/circle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
+        android:text="circle button flow"
+        android:textColor="@color/button_color"
+        android:textSize="15sp" />
+
+
+    <Button
+        android:id="@+id/ripple_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onBtnClick"
+        android:text="Ripple Acitvity"
+        android:textColor="@color/button_color"
+        android:textSize="15sp" />
+
 
 </LinearLayout>
+
+</ScrollView>

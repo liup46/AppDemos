@@ -37,7 +37,6 @@ public class SlidingTabsBasicFragment extends Fragment {
         mSlideTabLayout = (SlidingTabLayout) view.findViewById(R.id.slidebasic_tabs);
         mSlideTabLayout.setViewPager(mViewPager);
 
-
     }
 
     private class SamplePagerAdapter extends PagerAdapter {

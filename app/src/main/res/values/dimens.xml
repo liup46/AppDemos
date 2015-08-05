@@ -14,4 +14,7 @@
     <dimen name="mainActivityListItemHeight">48dp</dimen>
     <dimen name="mainActivityListItemPadding">16dp</dimen>
 
+    <dimen name="rippleStrokeWidth">2dp</dimen>
+    <dimen name="rippleRadius">64dp</dimen>
+
 </resources>

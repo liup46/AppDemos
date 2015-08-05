@@ -7,7 +7,9 @@ import android.view.View;
 
 import com.lp.FancyCoverFlow.FancyCoverMainActivity;
 import com.lp.FlipDeleteListItem.FlipDeleteActivity;
+import com.lp.circlering.CircleButtonActivity;
 import com.lp.girlsecret.GirlSecretActivity;
+import com.lp.ripple.RippleActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -49,6 +51,14 @@ public class MainActivity extends ActionBarActivity {
 
             case R.id.Fancy_Cover_Flow:
                 startActivity(new Intent(this, FancyCoverMainActivity.class));
+                break;
+
+            case R.id.circle_button:
+                startActivity(new Intent(this, CircleButtonActivity.class));
+                break;
+
+            case R.id.ripple_view:
+                startActivity(new Intent(this, RippleActivity.class));
                 break;
             default:
                 break;

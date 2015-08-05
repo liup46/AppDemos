@@ -7,6 +7,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.lp.myapp.R;
 
@@ -52,6 +53,7 @@ public class FlipDelete2 extends ActionBarActivity {
                         finish();
                         onBackPressed();
                     }
+                    TextView
                 }
 
 
