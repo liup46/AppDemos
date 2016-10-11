@@ -53,7 +53,6 @@ public class FlipDelete2 extends ActionBarActivity {
                         finish();
                         onBackPressed();
                     }
-                    TextView
                 }
 
 
